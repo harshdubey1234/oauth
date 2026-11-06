@@ -86,6 +86,7 @@ See [docs/validation.md](docs/validation.md) for the full record.
 - **Live:** the sweep above; individual runs for Calendly, Miro, Pipedrive, Attio, Raindrop and Cal.com.
 - **Source audit (7 Nov 2026):** all 118 sources cited by the reviewed guides were re-fetched. **10 dead links were found and replaced** with pages confirmed to contain the claim’s key terms; **one claim was downgraded** to unverified (Figma org app governance) because no live page supports it; the Dropbox guide gained its missing production-approval gate. 22 sources are reachable only through redirects with query strings (Google, Salesforce), confirmed HTTP 200 separately.
 - **Not done:** no provider app was registered and no OAuth connection completed — that needs real accounts and credentials, which stay out of this project. Authorize-endpoint checks are unauthenticated GETs. Review durations are shown only when a provider publishes them.
+- **Recording a real connection:** `scripts/oauth-smoke.mjs` runs a complete GitHub OAuth App flow (authorize → code → token → `GET /user`) on localhost with credentials from environment variables, and writes only non-secret observations (timestamps, HTTP statuses, granted scopes) to `outputs/oauth-smoke-github.json`. That record is the only thing that may back a *Tested* label.
 
 ## Run locally
 
