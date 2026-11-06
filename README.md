@@ -106,7 +106,10 @@ npm test; npm run typecheck; npm run lint; npm run build
 node scripts/research-probe.mjs Calendly Attio          # live research from the CLI, with request counts
 node scripts/directory-sweep.mjs                        # regenerate docs/directory-sweep.md
 node scripts/verify-research.mjs                        # 18 HTTP checks against a running Worker
+node scripts/gen-logos.mjs                              # regenerate lib/brand-logos.ts
 ```
+
+Logos: 70 marks come from [Simple Icons](https://simpleicons.org) (CC0, pinned dev dependency). For 29 brands Simple Icons doesn't carry (several were removed at the owner's request), `scripts/fetch-site-icons.mjs` saved the icon each brand publishes on its own site into `public/logos/` (provenance in `docs/logo-sources.json`); they're served locally, never hotlinked. Withings blocks automated requests, so it shows an initial. Logos are trademarks of their owners and identify each app only.
 
 ## Deploy (Cloudflare Workers + D1)
 

@@ -6,6 +6,7 @@ import type { Scenario } from "@/lib/schema";
 import type { LibraryGuide } from "@/lib/library-summary";
 import { AtlasScene } from "./atlas-scene";
 import { providerDirectory } from "@/lib/provider-directory";
+import { BrandLogo } from "./provider-icon";
 
 const curatedCount = providerDirectory.filter((e) => e.guide).length;
 const directoryGroups = Object.entries(
@@ -410,7 +411,9 @@ export function Library({ guides, libraryError }: { guides: LibraryGuide[]; libr
             <article className="ax-sample" aria-label="Sample guide: GitHub">
               <div className="ax-sample-head">
                 <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
-                  <span className="ax-mono-tile" style={{ width: 40, height: 40, fontSize: 18 }} aria-hidden="true">G</span>
+                  <span className="ax-mono-tile has-logo" style={{ width: 40, height: 40 }} aria-hidden="true">
+                    <BrandLogo name="GitHub" size={22} />
+                  </span>
                   <div style={{ display: "flex", flexDirection: "column" }}>
                     <strong>GitHub · Read private repo issues</strong>
                     <span className="ax-muted-mono" style={{ fontSize: 12 }}>docs.github.com · reviewed 6 Nov 2026</span>
@@ -545,8 +548,8 @@ export function Library({ guides, libraryError }: { guides: LibraryGuide[]; libr
                   <PageLink key={g.id} className="ax-card" href={`/guides/${g.id}`}>
                     <div className="ax-card-top">
                       <div className="ax-card-id">
-                        <span className={`ax-mono-tile${g.id === "tally" ? " ember" : ""}`} aria-hidden="true">
-                          {g.provider.name.charAt(0).toUpperCase()}
+                        <span className="ax-mono-tile has-logo" aria-hidden="true">
+                          <BrandLogo name={g.provider.name} size={24} />
                         </span>
                         <div>
                           <h3>{g.provider.name}</h3>
@@ -629,6 +632,7 @@ export function Library({ guides, libraryError }: { guides: LibraryGuide[]; libr
                   {entries.map((e) =>
                     e.guide ? (
                       <PageLink key={e.name} className="ax-dir-item curated" href={`/guides/${e.guide}`}>
+                        <span className="ax-dir-logo" aria-hidden="true"><BrandLogo name={e.name} size={14} /></span>
                         {e.name}
                       </PageLink>
                     ) : (
@@ -640,6 +644,7 @@ export function Library({ guides, libraryError }: { guides: LibraryGuide[]; libr
                         onClick={() => researchName(e.name)}
                         aria-label={`Research ${e.name} live`}
                       >
+                        <span className="ax-dir-logo" aria-hidden="true"><BrandLogo name={e.name} size={14} /></span>
                         {e.name}
                       </button>
                     ),

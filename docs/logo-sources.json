@@ -1,0 +1,148 @@
+{
+    "Slack":  {
+                  "file":  "/logos/slack.png",
+                  "from":  "https://a.slack-edge.com/80588/img/icons/app-256.png",
+                  "bytes":  9784
+              },
+    "Microsoft Outlook":  {
+                              "file":  "/logos/microsoft-outlook.png",
+                              "from":  "https://res.public.onecdn.static.microsoft/assets/mail/pwa/v4/pngs/apple-touch-icon.png",
+                              "bytes":  15472
+                          },
+    "Microsoft Teams":  {
+                            "file":  "/logos/microsoft-teams.ico",
+                            "from":  "https://teams.public.onecdn.static.microsoft/evergreen-assets/icons/microsoft_teams_logo_refresh_v2025.ico",
+                            "bytes":  63174
+                        },
+    "RingCentral":  {
+                        "file":  "/logos/ringcentral.png",
+                        "from":  "https://www.ringcentral.com/content/dam/rc-www/en_us/images/favicon/ringcentral_2.0_icon_favicon.png",
+                        "bytes":  459
+                    },
+    "Front":  {
+                  "file":  "/logos/front.png",
+                  "from":  "https://front.com/apple-icon.png",
+                  "bytes":  10028
+              },
+    "Freshdesk":  {
+                      "file":  "/logos/freshdesk.png",
+                      "from":  "https://www.freshworks.com/favicons/apple-touch-icon.png",
+                      "bytes":  43225
+                  },
+    "monday.com":  {
+                       "file":  "/logos/monday-com.png",
+                       "from":  "https://cdn.prod.website-files.com/656da6fea306219773d04208/65af6bd6e742d497b5f23f69_645898132bbaac20f1963919_256x256.png",
+                       "bytes":  4373
+                   },
+    "Smartsheet":  {
+                       "file":  "/logos/smartsheet.png",
+                       "from":  "https://www.smartsheet.com/sites/default/files/favicons/apple-touch-icon.png",
+                       "bytes":  2473
+                   },
+    "Wrike":  {
+                  "file":  "/logos/wrike.ico",
+                  "from":  "https://www.wrike.com/tp/static/favicon.ico?v8",
+                  "bytes":  15086
+              },
+    "Harvest":  {
+                    "file":  "/logos/harvest.svg",
+                    "from":  "https://www.getharvest.com/hubfs/Harvest_2026.svg",
+                    "bytes":  1151
+                },
+    "Tally":  {
+                  "file":  "/logos/tally.svg",
+                  "from":  "https://tally.so/favicon.svg",
+                  "bytes":  1024
+              },
+    "OneDrive":  {
+                     "file":  "/logos/onedrive.ico",
+                     "from":  "https://onedrive.live.com/favicon.ico",
+                     "bytes":  7886
+                 },
+    "Dropbox Sign":  {
+                         "file":  "/logos/dropbox-sign.png",
+                         "from":  "https://cdn.prod.website-files.com/64412cfef2e5476af2f044bd/6441320df020d65e5a8250be_webclip.png",
+                         "bytes":  8661
+                     },
+    "DocuSign":  {
+                     "file":  "/logos/docusign.png",
+                     "from":  "https://www.docusign.com/assets/images/apple-touch-icon-180x180.png",
+                     "bytes":  1850
+                 },
+    "Canva":  {
+                  "file":  "/logos/canva.ico",
+                  "from":  "https://www.canva.com/favicon.ico",
+                  "bytes":  4414
+              },
+    "Adobe":  {
+                  "file":  "/logos/adobe.ico",
+                  "from":  "https://www.adobe.com/favicon.ico",
+                  "bytes":  2228
+              },
+    "Salesforce":  {
+                       "file":  "/logos/salesforce.ico",
+                       "from":  "https://www.salesforce.com/c2/public/app/favicon.ico",
+                       "bytes":  5430
+                   },
+    "Pipedrive":  {
+                      "file":  "/logos/pipedrive.png",
+                      "from":  "https://cdn.dub-1.pipedriveassets.com/www-main-renderer/_next/static/media/apple-touch-icon-152x152.8af4bcfd.png",
+                      "bytes":  1804
+                  },
+    "Close":  {
+                  "file":  "/logos/close.png",
+                  "from":  "https://close.com/apple-touch-icon.png",
+                  "bytes":  12882
+              },
+    "Copper":  {
+                   "file":  "/logos/copper.png",
+                   "from":  "https://cdn.prod.website-files.com/69bdc11d6d8dca48c8a32ff4/6a68a40aeb4851e2572f03ee_copper-logo-icon.png",
+                   "bytes":  10703
+               },
+    "Eventbrite":  {
+                       "file":  "/logos/eventbrite.png",
+                       "from":  "https://cdn.evbstatic.com/s3-build/perm_001/8730ae/django/images/touch_icons/apple-touch-icon-180x180.png",
+                       "bytes":  3120
+                   },
+    "Klaviyo":  {
+                    "file":  "/logos/klaviyo.png",
+                    "from":  "https://www.klaviyo.com/icons/icon-512x512.png",
+                    "bytes":  16865
+                },
+    "Constant Contact":  {
+                             "file":  "/logos/constant-contact.ico",
+                             "from":  "https://www.constantcontact.com/favicon.ico",
+                             "bytes":  207887
+                         },
+    "FreshBooks":  {
+                       "file":  "/logos/freshbooks.ico",
+                       "from":  "https://www.freshbooks.com/favicon.ico",
+                       "bytes":  3327
+                   },
+    "LinkedIn":  {
+                     "file":  "/logos/linkedin.svg",
+                     "from":  "https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8",
+                     "bytes":  833
+                 },
+    "Oura":  {
+                 "file":  "/logos/oura.png",
+                 "from":  "https://ouraring.com/assets/icons/apple-touch-icon.png",
+                 "bytes":  2550
+             },
+    "Withings":  null,
+    "Gorgias":  {
+                    "file":  "/logos/gorgias.png",
+                    "from":  "https://cdn.prod.website-files.com/5e4ff204e7b6f80e402d407a/655f0a311c75248c5ff9756b_Social%20Avatar.png",
+                    "bytes":  1881
+                },
+    "Heroku":  {
+                   "file":  "/logos/heroku.png",
+                   "from":  "https://www.heroku.com/wp-content/uploads/2025/01/apple-touch-icon-180x180-1.png?w=180",
+                   "bytes":  5473
+               },
+    "Procore":  {
+                    "file":  "/logos/procore.png",
+                    "from":  "https://www.procore.com/images/apple-touch-icon-180x180.png",
+                    "bytes":  4983
+                }
+}

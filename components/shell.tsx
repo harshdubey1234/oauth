@@ -58,7 +58,8 @@ export function Shell({
         <footer className="ax-footer">
           <div className="ax-wrap ax-footer-inner">
             <span>
-              <strong>{PRODUCT.name}</strong> · An independent project. Not affiliated with Composio.
+              <strong>{PRODUCT.name}</strong> · An independent project. Not affiliated with Composio or any provider shown;
+              logos are trademarks of their owners, used only to identify each app.
             </span>
             <nav aria-label="Footer">
               <PageLink href="/#guides">Guide library</PageLink>

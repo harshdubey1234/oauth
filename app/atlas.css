@@ -1192,6 +1192,40 @@ input, select, textarea {
 .ax-mono-tile.ember {
   background: var(--ax-ember);
 }
+.ax-mono-tile.has-logo {
+  background: #fff;
+}
+
+/* Real provider marks (Simple Icons paths or the brand's own site icon). */
+.brand-logo {
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+.brand-initial {
+  display: grid;
+  place-items: center;
+  font-family: var(--ax-display);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+.ax-dir-logo {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: -4px;
+  border-radius: 5px;
+  background: #fff;
+  flex: 0 0 auto;
+}
+.ax-dir-item:not(.curated) .ax-dir-logo {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.provider-icon .brand-logo {
+  border-radius: 4px;
+}
 .ax-card-id > div {
   display: flex;
   flex-direction: column;
