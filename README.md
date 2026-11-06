@@ -5,7 +5,6 @@
 A developer building an AI agent wants their users to connect a third-party app. Before launch they may need to register an OAuth app with that provider and get it approved. OAuth Atlas turns scattered provider docs into a guide that says **how hard it is, how long it takes, what can block approval, and exactly what to do next** — and shows where each claim came from.
 
 - **Live:** https://oauth-atlas.harsh3dubey.workers.dev
-- **Demo script (3 min):** [docs/demo.md](docs/demo.md)
 
 ## What a reviewer can try
 
