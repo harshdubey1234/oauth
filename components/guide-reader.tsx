@@ -199,6 +199,72 @@ function download(name: string, content: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+const guideSections = [
+  ["paths", "Test vs launch"],
+  ["auth", "Authentication path"],
+  ["prerequisites", "Prerequisites"],
+  ["steps", "Setup steps"],
+  ["permissions", "Permissions"],
+  ["approvals", "Approvals"],
+  ["effort", "Effort & waiting"],
+  ["blockers", "Blockers"],
+  ["evidence", "Evidence & sources"],
+  ["pack", "Setup pack"],
+] as const;
+
+/** Table of contents that highlights the section currently being read. */
+function SectionNav() {
+  const [active, setActive] = useState<string>("");
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      // A section is "current" once its top passes a reading line ~30% down the viewport.
+      const line = window.innerHeight * 0.3;
+      let current = "";
+      for (const [id] of guideSections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= line) current = id;
+      }
+      // At the very bottom, the last section can't scroll up to the line — select it anyway.
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 4;
+      if (atBottom) current = guideSections[guideSections.length - 1][0];
+      setActive(current);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  return (
+    <nav aria-label="Guide sections">
+      {guideSections.map(([id, label]) => (
+        <a
+          href={`#${id}`}
+          key={id}
+          className={active === id ? "active" : undefined}
+          aria-current={active === id ? "location" : undefined}
+          onClick={() => setActive(id)}
+        >
+          {label}
+          <ChevronRight size={12} />
+        </a>
+      ))}
+    </nav>
+  );
+}
+
 function AtAGlance({ guide: g }: { guide: Guide }) {
   const a = assessGuide(g);
   const split = agentSplit(g);
@@ -878,25 +944,7 @@ export function GuideReader({
         <aside className="guide-nav">
           <div className="guide-nav-sticky">
             <span className="page-eyebrow">IN THIS GUIDE</span>
-            <nav aria-label="Guide sections">
-              {[
-                ["paths", "Test vs launch"],
-                ["auth", "Authentication path"],
-                ["prerequisites", "Prerequisites"],
-                ["steps", "Setup steps"],
-                ["permissions", "Permissions"],
-                ["approvals", "Approvals"],
-                ["effort", "Effort & waiting"],
-                ["blockers", "Blockers"],
-                ["evidence", "Evidence & sources"],
-                ["pack", "Setup pack"],
-              ].map(([id, label]) => (
-                <a href={`#${id}`} key={id}>
-                  {label}
-                  <ChevronRight size={12} />
-                </a>
-              ))}
-            </nav>
+            <SectionNav />
             <div className="nav-next">
               <Circle size={16} />
               <span>NEXT IN YOUR CHECKLIST</span>

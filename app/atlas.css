@@ -1541,11 +1541,45 @@ input, select, textarea {
   border-color: var(--line);
 }
 .guide-nav nav a {
+  position: relative;
   color: var(--ax-ink-3);
+  padding: 7px 10px 7px 12px;
+  margin-inline: -12px -10px;
+  border-radius: 8px;
+  transition: color 0.2s, background-color 0.2s;
 }
-.guide-nav nav a:hover,
+.guide-nav nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: 7px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--ax-ember);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+.guide-nav nav a:hover {
+  color: var(--ink);
+}
 .guide-nav nav a.active {
   color: var(--ink);
+  font-weight: 600;
+  background: var(--accent-soft);
+}
+.guide-nav nav a.active::before {
+  transform: scaleY(1);
+}
+.guide-nav nav a.active > svg {
+  opacity: 1;
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-nav nav a,
+  .guide-nav nav a::before {
+    transition: none;
+  }
 }
 
 .path-tabs {
