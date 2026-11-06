@@ -27,7 +27,7 @@ Each of the 37 directory entry pages added during this work was fetched with the
 
 **Product changes informed by the audit.** Difficulty badge and hands-on time on every card; an *At a glance* panel on every guide (difficulty and why, hands-on vs waiting, agent did / agent can do / you take over); a 100-app directory; evidence labels on the homepage now match guide pages (*Official docs / Estimate / Unverified*).
 
-**Tests.** 43 automated tests pass, including new ones for directory resolution, developer-host discovery and quoted fact extraction, the unverified name-guess path, the request budget and page truncation. Still not done: no provider app registration or OAuth connection (requires real accounts and credentials).
+**Tests.** 43 automated tests pass, including new ones for directory resolution, developer-host discovery and quoted fact extraction, the unverified name-guess path, the request budget and page truncation. One real OAuth connection was recorded (GitHub OAuth App, `read:user`, 6 Nov 2026 — see `docs/oauth-smoke-github.json`); no other provider app was registered.
 
 ## Original record — 6 November 2026
 
@@ -59,7 +59,7 @@ All provider policy findings below come from retrieved official public sources. 
 - 16/16 local HTTP checks passed, covering prepared SSR/API content, library visibility, mode status, unsafe input, cross-origin rejection, contextual help, missing guide, and the local synthetic shared fixture.
 - 18/18 live-research HTTP checks passed on the standalone built Worker. Actual public documentation retrieval established Notion OAuth 2.0 and a read-content capability, saved guide af89c473-abd3-4867-85b8-a02694801b02, reused duplicate submissions, reopened without cookies, retrieved the selected source again for help, retained durable jobs and excluded the generated variant from library search.
 - Package manifest dependency sets agree with the lockfile. Local credentials, deployment-account settings, data exports, dependencies and runtime state are excluded from the submission package.
-- Hosted deployment and runtime verification are recorded below. Sustained-load behavior remains untested. No provider OAuth app registration or authenticated provider API connection was completed.
+- Hosted deployment and runtime verification are recorded below. Sustained-load behavior remains untested. One provider OAuth connection was completed and recorded: a GitHub OAuth App, authorization code → token → `GET /user` (HTTP 200, `read:user`). The GitHub App path and other providers remain untested.
 
 ## Verified Cloudflare publication — 6 November 2026
 

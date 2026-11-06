@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { z } from "zod";
 import { preparedGuides } from "../lib/guides";
 import {
@@ -36,7 +37,7 @@ import { POST } from "../app/api/research/route";
 import { POST as helpPost } from "../app/api/guides/[id]/help/route";
 import "./docs.test";
 
-test("four prepared scenarios validate and do not claim successful connection tests", () => {
+test("prepared guides validate; only the recorded GitHub OAuth App run is labelled tested", () => {
   assert.deepEqual(
     preparedGuides.slice(0, 4).map((g) => g.provider.name),
     ["GitHub", "Slack", "Gmail", "Tally"],
@@ -45,9 +46,21 @@ test("four prepared scenarios validate and do not claim successful connection te
   assert.equal(new Set(preparedGuides.map((g) => g.id)).size, preparedGuides.length);
   for (const g of preparedGuides) {
     assert.ok(guideSchema.safeParse(g).success);
-    assert.equal(g.evidence.filter((e) => e.kind === "tested").length, 0);
+    const tested = g.evidence.filter((e) => e.kind === "tested");
+    assert.equal(tested.length, g.id === "github" ? 1 : 0, `${g.id} tested claims`);
     assert.ok(g.steps.every((s) => s.completion));
   }
+  // The single tested claim must point at a succeeded connection attempt matching the saved record.
+  const gh = preparedGuides[0];
+  const claim = gh.evidence.find((e) => e.kind === "tested")!;
+  const attempt = gh.attempts.find((a) => a.id === claim.testId)!;
+  assert.equal(attempt.kind, "connection");
+  assert.equal(attempt.outcome, "succeeded");
+  const record = JSON.parse(readFileSync("docs/oauth-smoke-github.json", "utf8"));
+  assert.equal(record.outcome, "succeeded");
+  assert.equal(record.apiCall.status, 200);
+  assert.equal(attempt.at, record.apiCall.at);
+  assert.ok(!/access_token|client_secret|gho_/.test(JSON.stringify(record)), "record holds no secrets");
   assert.equal(preparedGuides[2].launch.status, "blocked");
 });
 test("independent Tally guide distinguishes MCP OAuth, broad API keys and unverified launch", () => {

@@ -1,0 +1,25 @@
+{
+  "provider": "github",
+  "flow": "OAuth App, authorization code",
+  "startedAt": "2026-11-06T22:55:58.900Z",
+  "requestedScope": "read:user",
+  "authorization": {
+    "at": "2026-11-06T22:56:57.315Z",
+    "codeReceived": true
+  },
+  "tokenExchange": {
+    "at": "2026-11-06T22:56:58.063Z",
+    "status": 200,
+    "tokenType": "bearer",
+    "grantedScope": "read:user"
+  },
+  "apiCall": {
+    "at": "2026-11-06T22:56:58.712Z",
+    "endpoint": "GET /user",
+    "status": 200,
+    "oauthScopesHeader": "read:user",
+    "loginReturned": true
+  },
+  "outcome": "succeeded",
+  "finishedAt": "2026-11-06T22:56:58.716Z"
+}
