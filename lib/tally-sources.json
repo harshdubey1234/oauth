@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mcp",
+    "title": "Tally MCP: connection and authentication",
+    "url": "https://developers.tally.so/api-reference/mcp.md",
+    "retrievedAt": "2026-11-06T13:50:57.617Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "5de9b926f8629aadc41b8de490ad97e642542b01b4916d3c56f91025a6b7dcac",
+    "excerpt": "The Tally MCP server is currently in beta and subject to change."
+  },
+  {
+    "id": "keys",
+    "title": "Tally API keys and access boundaries",
+    "url": "https://developers.tally.so/api-reference/api-keys.md",
+    "retrievedAt": "2026-11-06T13:50:57.817Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "4cbc9d21965091e93f145374f9d6906d17f27e02aa7e7db7cfa10f92acb58956",
+    "excerpt": "Currently, you can only create an API key in the context of your own user."
+  },
+  {
+    "id": "submissions",
+    "title": "List submissions: parameters and response schema",
+    "url": "https://developers.tally.so/api-reference/endpoint/forms/submissions/list.md",
+    "retrievedAt": "2026-11-06T13:50:57.895Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "819f178ab52f4a4f1bcc27e7261764cb96d10897cea630e4ebef4ed71233fd4b",
+    "excerpt": "Returns a paginated list of form submissions with their responses."
+  },
+  {
+    "id": "version",
+    "title": "Tally API versioning",
+    "url": "https://developers.tally.so/api-reference/versioning.md",
+    "retrievedAt": "2026-11-06T13:50:58.042Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "2fcbdaf008e98c1c39ccffc0cd6daf280bdfb5fd1f0bda4270f70eb1a07d1053",
+    "excerpt": "providing the `tally-version` header."
+  },
+  {
+    "id": "resource",
+    "title": "MCP protected-resource discovery",
+    "url": "https://api.tally.so/.well-known/oauth-protected-resource/mcp",
+    "retrievedAt": "2026-11-06T13:50:59.084Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "add6c5ecce8fb21b9edef74d7900f04bfcc2f2cd0d709bf12667cdd5cd47acb2",
+    "excerpt": "\"scopes_supported\":[\"mcp\"]"
+  },
+  {
+    "id": "oauth",
+    "title": "OAuth authorization-server discovery",
+    "url": "https://api.tally.so/.well-known/oauth-authorization-server",
+    "retrievedAt": "2026-11-06T13:51:00.287Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "bc327c99bfc519b9074843eff2f2d93bff14c5e91d6799e8997c695ba2e30ba0",
+    "excerpt": "\"code_challenge_methods_supported\":[\"S256\"]"
+  },
+  {
+    "id": "api",
+    "title": "Tally API: access, rate limits and pagination",
+    "url": "https://tally.so/help/api",
+    "retrievedAt": "2026-11-06T13:53:24.525Z",
+    "retrieval": "page",
+    "official": true,
+    "contentHash": "31f5f82fab494dc44d56584e582bbaf1c47ca8c2a37881c8204a601b630a12b4",
+    "excerpt": "The Tally API is available for free to all Tally users."
+  }
+]

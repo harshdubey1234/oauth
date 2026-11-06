@@ -1,0 +1,17 @@
+/node_modules/
+/dist/
+/.next/
+/.vinext/
+/.wrangler/
+/.runtime/
+/.deployment/
+/outputs/
+/coverage/
+.env*
+.dev.vars*
+!.env.example
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+.DS_Store

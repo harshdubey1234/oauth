@@ -1,0 +1,6 @@
+{
+  "accountId": "YOUR_CLOUDFLARE_ACCOUNT_ID",
+  "databaseId": "YOUR_D1_DATABASE_ID",
+  "databaseName": "oauth-atlas",
+  "workerName": "oauth-atlas"
+}
